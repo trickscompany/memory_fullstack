@@ -54,26 +54,33 @@ Par exemple, sur un de mes serveurs :
 
 Il suffit que private soit accessible dans votre path.
 Il faut modifier index.php dans le dossier web pour qu'il prenne en compte le dossier private/
-<span class="colour" style="color: rgb(106, 153, 85);">define('ROOT', dirname(\_\_DIR\_\_).'/private');</span>
+<br>
+> <span class="colour" style="color: rgb(106, 153, 85);">define('ROOT', dirname(\_\_DIR\_\_).'/private');</span>
 
+<br>
 <span class="colour" style="color: rgb(106, 153, 85);">Et modifier Initapp/Database.php pour y mettre les données de connection correctes</span>
-<span class="colour" style="color: rgb(106, 153, 85);">private const DBHOST = 'localhost';</span>
-<span class="colour" style="color: rgb(106, 153, 85);">private const DBUSER = 'xxxxx';</span>
-<span class="colour" style="color: rgb(106, 153, 85);">private const DBPASS = 'xxxx';</span>
-<span class="colour" style="color: rgb(106, 153, 85);">private const DBNAME = 'xxxx';</span>
+<br>
+> <span class="colour" style="color: rgb(106, 153, 85);">private const DBHOST = 'localhost';</span>
+> <span class="colour" style="color: rgb(106, 153, 85);">private const DBUSER = 'xxxxx';</span>
+> <span class="colour" style="color: rgb(106, 153, 85);">private const DBPASS = 'xxxx';</span>
+> <span class="colour" style="color: rgb(106, 153, 85);">private const DBNAME = 'xxxx';</span>
 
+<br>
 Perspectives d'évolutions et améliorations :
-régler le pb de watcher (arghhhhhh),
-améliorer la gestion des variables d'environnements, notamment pour la mise en prod,
-ajouter la possiblité de saisir son prénom lors de l'enregistrement du score,
-optimiser le code du backoffice,
-se passer de jQuery,
-créer un mode multi-joueurs
 
+* régler le pb de watcher (arghhhhhh),
+* améliorer la gestion des variables d'environnements, notamment pour la mise en prod,
+* ajouter la possiblité de saisir son prénom lors de l'enregistrement du score,
+* optimiser le code du backoffice,
+* se passer de jQuery,
+* créer un mode multi-joueurs
+
+<br>
 Dans le cadre d'un projet servant de support de cours, on peut parfaitement imaginer reprendre chaque partie de cette réalisation et approfondir toutes les notions en partant du synopsis fourni pour ce test.
 Chaque technologie utilise amène son lot de complexité croissante mais également de possibilité d'apprentissages de connaissances transverses menant à l'autonomie progressive de l'apprenant.
 
-Je ne maitrise pas à 100% la pile utilisée pour ce projet, je n'utilise pas tout dans mon quotidien. Mais j'ai pris énormément de plaisir à rechercher les informations nécessaires à mener à bien le test.
+Ce test a été ne belle occasion de me rendre compte du plaisr pris à rechercher les informations nécessaires à mener à bien le projet.
+En espérant pouvoir transmettre ce plaisir aux futures candidates développeuses et aux futurs candidats développeurs.
 
 <br>
 <br>
