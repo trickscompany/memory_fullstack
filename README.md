@@ -15,7 +15,7 @@ NodeJs : compilation Sass en CSS via Gulp en gestionnaire de taches qui permet d
 
 Pré-requis : avoir une machine sur laquelle docker est installé, avec docker-compose, le port 80 doit êter libre. Sinon, il faut changer le port dans docker-compose.yml partie web/nginx:
 
-> <span class="colour" style="color: rgb(212, 212, 212);"> </span><span class="colour" style="color: rgb(86, 156, 214);">web</span><span class="colour" style="color: rgb(212, 212, 212);">:</span>
+<span class="colour" style="color: rgb(212, 212, 212);"> </span><span class="colour" style="color: rgb(86, 156, 214);">web</span><span class="colour" style="color: rgb(212, 212, 212);">:</span>
 > <span class="colour" style="color: rgb(212, 212, 212);">   ...</span>
 > <span class="colour" style="color: rgb(212, 212, 212);">    </span><span class="colour" style="color: rgb(86, 156, 214);">ports</span><span class="colour" style="color: rgb(212, 212, 212);">:</span>
 > <span class="colour" style="color: rgb(212, 212, 212);">      - </span><span class="colour" style="color: rgb(206, 145, 120);">80:80</span>
