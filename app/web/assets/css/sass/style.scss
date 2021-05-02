@@ -1,0 +1,217 @@
+$background: #d4b9b9;
+$plateau-background: #ff8662;
+$carte-background: #7ff9ff;
+$carte_opend-background: #89C4FF;
+$carte_ok-background: #9BCB3C;
+$carte_notok-background: #EE0E51;
+
+$barreCirculaireColor: #6BC967;
+$fontColor: #888;
+$backgroundColor: #2f3439;
+$backgroundTimerColor: white;
+$tailleTimer: 100px;
+$borderWidth: 100px;
+$fontSize: 30px;
+
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: $background;
+	overflow: hidden;
+	font-family: "Coda", cursive;
+}
+#panneau-jeu {
+	background: $plateau-background;
+	padding: 15px;
+	border-radius: 10px 10px 10px 60px;
+	box-shadow: 0px 0px 20px 0px #00000069;
+	display: flex;
+	flex-direction: column;
+}
+.plateau {
+	width: 435px;
+	margin: 0 auto;
+	padding: 16px;
+	.carte {
+		height: 75px;
+		width: 75px;
+		background:$carte-background;
+		display: inline-block;
+		margin: 0 15px 15px 0;
+		line-height: 140px;
+		font-size: 0;
+		color: #ffffff;
+		text-align: center;
+		border-radius: 8px;
+		vertical-align: top;
+		cursor: pointer;
+		transform: rotateY(180deg);
+		transform-style: preserve-3d;
+		transition: transform 0.3s ease;
+		font-family: FontAwesome;
+		line-height: 75px;
+		box-shadow: 0 0 1px 1px #00000057;
+		&:nth-child(5n) {
+			margin: 0 0 15px 0;
+		}
+		&:nth-child(n+16) {
+			margin: 0 15px 0 0;
+			&:nth-child(5n) {
+				margin: 0;
+			}
+		}
+	}
+	.carte.ouvert {
+		transform: rotateY(0);
+		background: $carte_opend-background;
+		cursor: default;
+	}
+	.carte.montre {
+		font-size: 33px;
+	}
+	.carte.ok {
+		transform: rotateY(0);
+		cursor: default;
+		background: $carte_ok-background;
+		font-size: 33px;
+	}
+	.carte.notok {
+		background: $carte_notok-background;
+	}
+}
+#util {
+	display: flex;
+}
+#zone-info {
+	text-align: left;
+	width: 345px;
+	display: flex;
+	line-height: 100px;
+	justify-content: space-evenly;
+	.restart {
+		cursor: pointer;
+		font-size: 4rem;
+		color: #6BC967;
+		display: flex;
+		align-items: center;
+		i {
+			text-shadow: 0px 0px 5px #00000052;
+		}
+	}
+	.information {
+		line-height: 1em;
+		padding: 10px 20px;
+		p {
+			font-size: 14px;
+			&:last-child {
+				text-align: right;
+			}
+		}
+	}
+}
+.swal2-overlay {
+	background-color: white;
+}
+.swal2-title.dude-title {
+	font-size: 1.28em;
+}
+.classement {
+	counter-reset: joueur;
+	text-align: left;
+	padding: 0 1rem;
+	margin: 0;
+	li {
+		list-style-type: none;
+		counter-increment: joueur;
+		padding: 5px 0;
+		&:before {
+			content: counter(joueur);
+			padding: 2px 20px 2px;
+			margin-right: 8px;
+			background: #79a7d5;
+			-moz-border-radius: 60px;
+			border-radius: 6px;
+			font-weight: bold;
+			font-size: 0.8em;
+			width: 0.5em;
+			display: inline-block;
+			color: white;
+			text-align: center;
+		}
+		span {
+			&:first-child {
+				width: 76px;
+				display: inline-block;
+				text-align: center;
+			}
+		}
+	}
+}
+ul.classement {
+	li {
+		&:before {
+			visibility: hidden;
+		}
+	}
+}
+.timerrounded {
+	padding-top: 20px;
+	width: $tailleTimer;
+	height: $tailleTimer;
+	display: flex;
+
+	.n {
+		position: absolute;
+		width: $tailleTimer;
+		height: $tailleTimer;
+		background: $backgroundTimerColor;
+		border-radius: 50%;
+		text-align: center;
+		line-height: $tailleTimer;
+		font-size: $fontSize;
+		color: $fontColor;
+	}
+	.slice {
+		position: absolute;
+		width: $tailleTimer;
+		height: $tailleTimer;
+		clip: rect(0px, $tailleTimer, $tailleTimer, ($tailleTimer / 2));
+
+		&.nc {
+			clip: rect(auto, auto, auto, auto);
+		}
+		.q {
+			position: absolute;
+			width: ($tailleTimer - $borderWidth * 2);
+			height: ($tailleTimer - $borderWidth * 2);
+			border: ($borderWidth + 1) $backgroundTimerColor solid;
+			border-radius: 50%;
+			clip: rect(0px, ($tailleTimer / 2), ($tailleTimer / 2), 0px);
+			z-index: 2;
+		}
+		.part {
+			border: $borderWidth $barreCirculaireColor solid;
+			position: absolute;
+			width: ($tailleTimer - $borderWidth * 2);
+			height: ($tailleTimer - $borderWidth * 2);
+			clip: rect(0px, ($tailleTimer / 2), $tailleTimer, 0px);
+			border-radius: 50%;
+			transition: all 1s linear;
+			z-index: 1;
+		}
+	}
+	.slice.reset {
+		clip: rect(0px, 0px, 0px, 0px);
+		.part {
+			transition: all 0s linear;
+		}
+	}
+}

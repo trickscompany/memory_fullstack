@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+  <title>Memory O'Clock - Test</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.3/css/all.css' />
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Coda' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+<h1>Le jeu du Memory</h1>
+<div id="panneau-jeu">
+	<ul class="plateau"></ul>
+	<div id="util">
+		<div class='timerrounded' id='tictac'><div class='n'>0</div><div class='slice'><div class='q'></div><div class='part r'></div><div class='part l'></div></div></div>
+		<div id="zone-info">
+			<div class="information">
+				<p>Pour lancer le jeu, cliques sur une carte, tu as 2mn pour retrouver les paires.</p><p>Pour le relancer, cliques ici =></p>
+			</div>
+			<div class="restart">
+				<i class="fas fa-sync"></i>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+  <script  src="./assets/js/script.js"></script>
+
+</body>
+</html>
