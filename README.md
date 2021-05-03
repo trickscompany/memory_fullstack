@@ -48,6 +48,10 @@ depuis le répertoire app/, on peut lancer la commande
 
 qui compilera les CSS
 
+Dans certains cas, il faudra, la première fois, installer les dépendances:
+
+`docker-compose exec nodejs npm install`
+
 Nota: il était prévu de mettre en place un watcher, mais ce dernier s'est obstiné à ne pas vouloir fonctionner.
 
 Ca doit me crever les yeux, mais le temps passant vite, il a fallu se résigner ....
@@ -85,6 +89,9 @@ Et modifier Initapp/Database.php pour y mettre les données de connection correc
 > private const DBPASS = 'xxxx';
 >
 > private const DBNAME = 'xxxx';
+
+La base et les tables peuvent être créées avec le script /etc/initdb/init.sql 
+Adaptez le user avec vos credentials.
 
 Perspectives d'évolutions et améliorations :
 
