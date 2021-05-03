@@ -2,7 +2,7 @@
 
 Vous connaissez tous le jeu du memory.
 Il s'agit de retrouver toutes les paires de cartes, en enretournant 2 à chaques fois, et tenter de reconstiuer les paires.
-Une démo est diponilbe : [https://wisuel.com](https://wisuel.com)
+Une démo est diponilbe : [https://wisuel.com/index.html](https://wisuel.com/index.html)
 
 Il y avait plein d'options possibles, et faire des choix il a fallu.
 <br>
